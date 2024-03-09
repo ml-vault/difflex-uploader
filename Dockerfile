@@ -1,4 +1,5 @@
 FROM runpod/base:0.5.1-cpu
-
-RUN pip install mlvault
+WORKDIR /workspace
+COPY . .
+RUN pip install -r
 CMD ["sh", "server.sh"]
